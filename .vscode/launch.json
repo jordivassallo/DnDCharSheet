@@ -9,14 +9,6 @@
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "main.java.Main",
-            "projectName": "DnDCharSheetLocal_98e26a20",
-            "vmArgs": "--module-path \"C:/Users/jordi/Downloads/Programming Software/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "main.java.Main",
             "projectName": "DnDCharSheet_459a540b",
             "vmArgs": "--module-path \"C:/Users/jordi/Downloads/Programming Software/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics"
         }
