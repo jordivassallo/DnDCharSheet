@@ -49,7 +49,7 @@
                         <Image url="@../img/button_unpressed.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="createLbl" alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" text="Create Character">
+                  <Label alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" text="Create Character">
                      <font>
                         <Font name="Algerian" size="14.0" />
                      </font>
@@ -63,7 +63,7 @@
                         <Image url="@../img/button_unpressed.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="loadLbl" alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" text="Load Charactrer">
+                  <Label alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" text="Load Charactrer">
                      <font>
                         <Font name="Algerian" size="14.0" />
                      </font>

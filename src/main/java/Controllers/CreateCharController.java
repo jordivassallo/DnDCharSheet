@@ -2,9 +2,9 @@ package main.java.Controllers;
 
 import java.io.IOException;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
@@ -12,29 +12,18 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Screen;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
+
 
 public class CreateCharController extends StackPane {
 
-    private Parent root;
+    @FXML private TextField charName;
     
-    public CreateCharController() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/resources/fxml/createChar.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
-
-        try {
-            this.root = fxmlLoader.load();            
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
-
+    public CreateCharController() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/resources/fxml/createChar.fxml"));
+        loader.setRoot(this);
+        loader.setController(this);
         
-        StackPane rootNode = (StackPane) this.root;
-        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-
+        StackPane root = (StackPane) loader.load();
         Image img = new Image("/main/resources/img/RepeatBackground.png");
         BackgroundSize customSize = new BackgroundSize(0.5, 0.5, true, true, true, false);
         BackgroundImage bImg = new BackgroundImage(img, 
@@ -43,13 +32,7 @@ public class CreateCharController extends StackPane {
                                                    BackgroundPosition.CENTER, 
                                                    customSize);
         Background bGround = new Background(bImg);
-        rootNode.setBackground(bGround);
-
-        Stage stage = (Stage) this.getScene().getWindow();
-        stage.setX(((primaryScreenBounds.getMinX() + primaryScreenBounds.getMaxX()) / 2) - stage.getWidth() / 2);
-        stage.setY(primaryScreenBounds.getMinY());
-        stage.setHeight(primaryScreenBounds.getMaxY());
-        stage.setScene(new Scene(root));
+        root.setBackground(bGround);
     }
 
 }

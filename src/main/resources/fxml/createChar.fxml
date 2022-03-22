@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Controllers.CreateCharController">
    <children>
       <ImageView fitHeight="68.0" fitWidth="478.0" pickOnBounds="true" preserveRatio="true" scaleX="1.8" StackPane.alignment="TOP_CENTER" />
       <ImageView fitHeight="450.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true" translateY="-80.0">
@@ -48,7 +48,7 @@
                               <Insets top="50.0" />
                            </VBox.margin>
                            <children>
-                              <TextField prefHeight="59.0" prefWidth="358.0" promptText="Character Name" styleClass="customTextField" stylesheets="@../CSS/textfields.css">
+                              <TextField fx:id="charName" prefHeight="59.0" prefWidth="358.0" promptText="Character Name" styleClass="customTextField" stylesheets="@../CSS/textfields.css">
                                  <font>
                                     <Font name="Calibri Light" size="18.0" />
                                  </font>

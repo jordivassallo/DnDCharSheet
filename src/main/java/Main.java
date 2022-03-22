@@ -4,11 +4,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import main.java.Controllers.MenuController;
-// import javafx.scene.image.ImageView;
-// import javafx.scene.control.Button;
-// import javafx.fxml.*;
-// import javafx.scene.layout.*;
-// import java.net.URL;
 
  
 public class Main extends Application {
