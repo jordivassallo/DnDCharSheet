@@ -8,10 +8,8 @@ import main.java.Controllers.MenuController;
 // import javafx.scene.control.Button;
 // import javafx.fxml.*;
 // import javafx.scene.layout.*;
-
-
 // import java.net.URL;
-//test comment
+
  
 public class Main extends Application {
     @Override

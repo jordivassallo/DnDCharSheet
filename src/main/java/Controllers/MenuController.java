@@ -71,31 +71,31 @@ public class MenuController extends StackPane {
     /* OnClick activity for create button */
     @FXML
     protected void createBtn() throws Exception {
-        // Parent root = FXMLLoader.load(getClass().getResource("/main/resources/fxml/createChar.fxml"));
-        // StackPane rootNode = (StackPane) root;
-        // Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+        Parent root = FXMLLoader.load(getClass().getResource("/main/resources/fxml/createChar.fxml"));
+        StackPane rootNode = (StackPane) root;
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
 
 
-        // /* Setting the repeat background */
-        // Image img = new Image("/main/resources/img/RepeatBackground.png");
-        // BackgroundSize customSize = new BackgroundSize(0.5, 0.5, true, true, true, false);
-        // BackgroundImage bImg = new BackgroundImage(img, 
-        //                                            BackgroundRepeat.NO_REPEAT, 
-        //                                            BackgroundRepeat.NO_REPEAT, 
-        //                                            BackgroundPosition.CENTER, 
-        //                                            customSize);
-        // Background bGround = new Background(bImg);
-        // rootNode.setBackground(bGround);
+        /* Setting the repeat background */
+        Image img = new Image("/main/resources/img/RepeatBackground.png");
+        BackgroundSize customSize = new BackgroundSize(0.5, 0.5, true, true, true, false);
+        BackgroundImage bImg = new BackgroundImage(img, 
+                                                   BackgroundRepeat.NO_REPEAT, 
+                                                   BackgroundRepeat.NO_REPEAT, 
+                                                   BackgroundPosition.CENTER, 
+                                                   customSize);
+        Background bGround = new Background(bImg);
+        rootNode.setBackground(bGround);
 
-        // Stage stage = (Stage) this.getScene().getWindow();
-        // stage.setX(((primaryScreenBounds.getMinX() + primaryScreenBounds.getMaxX()) / 2) - stage.getWidth() / 2);
-        // stage.setY(primaryScreenBounds.getMinY());
-        // stage.setHeight(primaryScreenBounds.getMaxY());
-        // stage.setScene(new Scene(root));
-        CreateCharController newController = new CreateCharController();
-        Scene scene = new Scene(newController);
-        Stage stage = (Stage) createLbl.getScene().getWindow();
-        stage.setScene(scene);
+        Stage stage = (Stage) this.getScene().getWindow();
+        stage.setX(((primaryScreenBounds.getMinX() + primaryScreenBounds.getMaxX()) / 2) - stage.getWidth() / 2);
+        stage.setY(primaryScreenBounds.getMinY());
+        stage.setHeight(primaryScreenBounds.getMaxY());
+        stage.setScene(new Scene(root));
+        // CreateCharController newController = new CreateCharController();
+        // Scene scene = new Scene(newController);
+        // Stage stage = (Stage) createLbl.getScene().getWindow();
+        // stage.setScene(scene);
     }
 
     /* OnClick activity for load button */
