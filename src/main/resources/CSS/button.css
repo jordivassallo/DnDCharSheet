@@ -1,0 +1,9 @@
+/* .label {
+    -fx-background-image: url("/resources/img/button_unpressed.jpg");
+    -fx-background-repeat: no-repeat;
+}
+
+.label:hover {
+    -fx-background-image: url("/resources/img/button_pressed.jpg");
+    -fx-background-repeat: no-repeat;
+} */

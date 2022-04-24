@@ -39,17 +39,16 @@
                   <Image url="@../img/logo.png" />
                </image>
             </ImageView>
-            <StackPane prefHeight="42.0" prefWidth="640.0">
+            <StackPane prefHeight="42.0" prefWidth="640.0" styleClass="label" stylesheets="@../CSS/button.css">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
                <children>
                   <ImageView fx:id="createBtnImage" fitHeight="52.0" fitWidth="209.0" onMouseClicked="#createBtn" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/button_unpressed.png" />
-                     </image>
-                  </ImageView>
-                  <Label alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" text="Create Character">
+                        <Image url="@../img/button_unpressed.jpg" />
+                     </image></ImageView>
+                  <Label fx:id="createBtnLabel" alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" stylesheets="@../CSS/button.css" text="Create Character">
                      <font>
                         <Font name="Algerian" size="14.0" />
                      </font>
@@ -60,7 +59,7 @@
                <children>
                   <ImageView fx:id="loadBtnImage" fitHeight="52.0" fitWidth="209.0" onMouseClicked="#createBtn" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/button_unpressed.png" />
+                        <Image url="@../img/button_unpressed.jpg" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" text="Load Charactrer">

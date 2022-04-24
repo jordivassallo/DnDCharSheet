@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Controllers.CreateCharController">
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="68.0" fitWidth="478.0" pickOnBounds="true" preserveRatio="true" scaleX="1.8" StackPane.alignment="TOP_CENTER" />
       <ImageView fitHeight="450.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true" translateY="-80.0">
@@ -16,7 +16,7 @@
       </ImageView>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="640.0">
          <children>
-            <Label alignment="CENTER" prefHeight="66.0" prefWidth="640.0" text="Create New Character" textFill="#fa0000">
+            <Label fx:id="pageTitle" alignment="CENTER" prefHeight="66.0" prefWidth="640.0" text="Create New Character" textFill="#fa0000">
                <font>
                   <Font name="Algerian" size="36.0" />
                </font>
@@ -48,7 +48,7 @@
                               <Insets top="50.0" />
                            </VBox.margin>
                            <children>
-                              <TextField fx:id="charName" prefHeight="59.0" prefWidth="358.0" promptText="Character Name" styleClass="customTextField" stylesheets="@../CSS/textfields.css">
+                              <TextField fx:id="charName" focusTraversable="false" prefHeight="59.0" prefWidth="358.0" promptText="Character Name" styleClass="customTextField" stylesheets="@../CSS/textfields.css">
                                  <font>
                                     <Font name="Calibri Light" size="18.0" />
                                  </font>
@@ -74,7 +74,7 @@
                                     <Font name="Algerian" size="16.0" />
                                  </font>
                               </Label>
-                              <ComboBox prefWidth="169.0" promptText="—">
+                              <ComboBox focusTraversable="false" prefWidth="169.0" promptText="—">
                                  <HBox.margin>
                                     <Insets left="5.0" right="5.0" top="12.0" />
                                  </HBox.margin>
@@ -94,7 +94,7 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox prefWidth="170.0" promptText="—">
+                              <ComboBox focusTraversable="false" prefWidth="170.0" promptText="—">
                                  <HBox.margin>
                                     <Insets left="5.0" right="5.0" top="12.0" />
                                  </HBox.margin>
@@ -114,7 +114,7 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox prefWidth="170.0" promptText="—">
+                              <ComboBox focusTraversable="false" prefWidth="170.0" promptText="—">
                                  <HBox.margin>
                                     <Insets left="5.0" right="5.0" top="12.0" />
                                  </HBox.margin>
@@ -140,7 +140,7 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox prefWidth="170.0" promptText="—">
+                              <ComboBox focusTraversable="false" prefWidth="170.0" promptText="—">
                                  <HBox.margin>
                                     <Insets left="5.0" right="5.0" top="12.0" />
                                  </HBox.margin>
@@ -160,7 +160,7 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox prefWidth="170.0" promptText="—">
+                              <ComboBox focusTraversable="false" prefWidth="170.0" promptText="—">
                                  <HBox.margin>
                                     <Insets left="5.0" right="5.0" top="12.0" />
                                  </HBox.margin>
@@ -192,7 +192,7 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </VBox>
-                              <ComboBox prefWidth="170.0" promptText="—">
+                              <ComboBox focusTraversable="false" prefWidth="170.0" promptText="—">
                                  <HBox.margin>
                                     <Insets left="5.0" right="5.0" top="12.0" />
                                  </HBox.margin>
@@ -209,4 +209,4 @@
          </children>
       </VBox>
    </children>
-</StackPane>
+</fx:root>
