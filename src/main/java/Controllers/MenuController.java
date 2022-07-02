@@ -5,9 +5,7 @@ import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import main.java.Interfaces.Styles;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
@@ -19,12 +17,8 @@ import javafx.scene.control.Label;
 
 
 public class MenuController extends StackPane implements Styles {
-
-
     @FXML private ImageView createBtnImage, loadBtnImage;
     @FXML private Label createBtnLabel;
-    private Image pressedBtn = new Image("/main/resources/img/button_pressed.jpg");
-    private Image unpressedBtn = new Image("/main/resources/img/button_unpressed.jpg");
 
 
     public MenuController() {
@@ -32,12 +26,11 @@ public class MenuController extends StackPane implements Styles {
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         
-
         try {
             fxmlLoader.load();
 
-            btnAnimation(createBtnImage, pressedBtn, unpressedBtn);
-            btnAnimation(loadBtnImage, pressedBtn, unpressedBtn);
+            btnAnimation(createBtnImage);
+            btnAnimation(loadBtnImage);
 
         } catch (IOException exception) {
             throw new RuntimeException(exception);
@@ -48,6 +41,7 @@ public class MenuController extends StackPane implements Styles {
     @FXML
     protected void createBtn() throws Exception {
         CreateCharController createCharController = new CreateCharController();
+        PopUpController popUpController = new PopUpController();
 
         /* Resizing and orienting current window */
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
@@ -57,8 +51,9 @@ public class MenuController extends StackPane implements Styles {
         stage.setHeight(primaryScreenBounds.getMaxY());
         stage.setScene(new Scene(createCharController));
 
-        /* Creating the initial pop-up */
+        /* Creating the initial popup */
         Stage popup = new Stage();
+        popup.setScene(new Scene(popUpController));
         popup.setResizable(false);
         popup.setHeight(480);
         popup.setWidth(640);
@@ -67,6 +62,7 @@ public class MenuController extends StackPane implements Styles {
         popup.initModality(Modality.APPLICATION_MODAL);
         popup.showAndWait(); 
     }
+
 
     /* OnClick activity for load button */
     @FXML
@@ -80,7 +76,6 @@ public class MenuController extends StackPane implements Styles {
         stage.setHeight(primaryScreenBounds.getMaxY());
         stage.setScene(new Scene(root));
     }
-
 }
 
 
