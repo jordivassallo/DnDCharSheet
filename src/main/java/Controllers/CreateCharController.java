@@ -1,25 +1,22 @@
 package main.java.Controllers;
 
 import java.io.IOException;
-import java.security.Principal;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.StackPane;
+import main.java.Interfaces.Styles;
 
 
-public class CreateCharController extends StackPane {
+public class CreateCharController extends StackPane implements Styles {
 
     @FXML private TextField charName;
     

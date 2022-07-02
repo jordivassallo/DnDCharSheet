@@ -4,6 +4,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import main.java.Interfaces.Styles;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -17,7 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
 
-public class MenuController extends StackPane {
+public class MenuController extends StackPane implements Styles {
 
 
     @FXML private ImageView createBtnImage, loadBtnImage;
@@ -34,32 +35,14 @@ public class MenuController extends StackPane {
 
         try {
             fxmlLoader.load();
-            // initializeListeners();  //TODO: remove this function
+
+            btnAnimation(createBtnImage, pressedBtn, unpressedBtn);
+            btnAnimation(loadBtnImage, pressedBtn, unpressedBtn);
 
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
     }
-
-    private void initializeListeners() {        //TODO: remove this function (replace with css ideally)
-        /* Create Button Animations  (Event Handler + lambda) */
-        createBtnImage.addEventHandler(MouseEvent.MOUSE_ENTERED,
-                          e -> createBtnImage.setImage(pressedBtn)
-        );
-        createBtnImage.setOnMouseExited(e -> {
-            createBtnImage.setImage(unpressedBtn);
-        });
-        
-        
-        /* Load Button Animations (setOnXXXX method) */
-        loadBtnImage.addEventHandler(MouseEvent.MOUSE_ENTERED, 
-                          e -> loadBtnImage.setImage(pressedBtn)
-        );
-        loadBtnImage.setOnMouseExited(e -> {
-            loadBtnImage.setImage(unpressedBtn);
-        });
-    }
-
 
     /* OnClick activity for create button */
     @FXML

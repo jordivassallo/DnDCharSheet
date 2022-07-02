@@ -5,17 +5,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane prefHeight="42.0" prefWidth="640.0" styleClass="label" stylesheets="@../CSS/button.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="40.0" prefWidth="640.0" type="StackPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="createBtnImage" fitHeight="52.0" fitWidth="209.0" onMouseClicked="#createBtn" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="btnImage" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/button_unpressed.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="createBtnLabel" alignment="CENTER" mouseTransparent="true" prefHeight="30.0" prefWidth="200.0" stylesheets="@../CSS/button.css" text="Default Text">
+      <Label fx:id="btnText" alignment="CENTER" mouseTransparent="true" prefHeight="50.0" prefWidth="200.0" text="Text">
          <font>
             <Font name="Algerian" size="14.0" />
          </font>
       </Label>
    </children>
-</StackPane>
+</fx:root>
