@@ -5,6 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import org.controlsfx.control.*?>
 
 <fx:root alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" type="VBox" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -29,11 +30,11 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <ComboBox fx:id="sourceDrop" focusTraversable="false" prefWidth="169.0" promptText="—">
+            <CheckComboBox fx:id="sourceDrop" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="5.0" right="150.0" top="12.0" />
                </HBox.margin>
-            </ComboBox>
+            </CheckComboBox>
          </children>
          <VBox.margin>
             <Insets top="20.0" />
@@ -52,11 +53,11 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <ComboBox fx:id="statDrop" focusTraversable="false" prefWidth="169.0" promptText="—">
+            <CheckComboBox fx:id="statDrop" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="5.0" right="150.0" top="12.0" />
                </HBox.margin>
-            </ComboBox>
+            </CheckComboBox>
          </children>
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="480.0">
@@ -72,11 +73,11 @@
                   <Insets />
                </opaqueInsets>
             </Label>
-            <ComboBox fx:id="expDrop" focusTraversable="false" prefWidth="169.0" promptText="—">
+            <CheckComboBox fx:id="expDrop" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="5.0" right="150.0" top="12.0" />
                </HBox.margin>
-            </ComboBox>
+            </CheckComboBox>
          </children>
       </HBox>
       <StackPane>
