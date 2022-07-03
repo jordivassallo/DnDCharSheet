@@ -16,48 +16,42 @@ public class PopUpController extends VBox implements Styles {
     @FXML private ImageView btnDone;
 
     public enum Sources {
-        PHB (false, "Player's Handbook"),
-        MM (false, "Monster Manual"),
-        DMG (false, "Dungeon Master's Guide"),
-        VGtM (false, "Volo's Guide to Monsters"),
-        XGtE (false, "Xanathar's Guide to Everything"),
-        MToF (false, "Mordenkainen's Tome of Foes"),
-        TCoE (false, "Tasha's Cauldron of Everything"),
-        FToD (false, "Fizban's Treasury of Dragons"),
-        MPMotM (false, "Mordenkainen Presents: Monsters of the Multiverse");
+        PHB ("Player's Handbook"),
+        MM ("Monster Manual"),
+        DMG ("Dungeon Master's Guide"),
+        VGtM ("Volo's Guide to Monsters"),
+        XGtE ("Xanathar's Guide to Everything"),
+        MToF ("Mordenkainen's Tome of Foes"),
+        TCoE ("Tasha's Cauldron of Everything"),
+        FToD ("Fizban's Treasury of Dragons"),
+        MPMotM ("Mordenkainen Presents: Monsters of the Multiverse");
 
-        boolean present;
         String fullname;
 
-        private Sources(boolean present, String fullname) {
-            this.present = present;
+        private Sources(String fullname) {
             this.fullname = fullname;
         }   
     }
     public enum Stats {
-        METHOD_1 (false, "Point Buy"),
-        METHOD_2 (false, "Standard Array"),
-        METHOD_3 (false, "Standard Roll"),
-        METHOD_4 (false, "Custom Roll"),
-        METHOD_5 (false, "Manual Fill");
-
-        boolean present;
+        METHOD_1 ("Point Buy"),
+        METHOD_2 ("Standard Array"),
+        METHOD_3 ("Standard Roll"),
+        METHOD_4 ("Custom Roll"),
+        METHOD_5 ("Manual Fill");
+        
         String method_name;
 
-        private Stats(boolean present, String method_name){
-            this.present = present;
+        private Stats(String method_name){
             this.method_name = method_name;
         }
     }
     public enum Advancement {
-        EXP (false, "Experience Points"),
-        MILESTONE (false, "Milestone");
+        EXP ("Experience Points"),
+        MILESTONE ("Milestone");
 
-        boolean present;
         String method_name;
 
-        private Advancement(boolean present, String method_name) {
-            this.present = present;
+        private Advancement(String method_name) {
             this.method_name = method_name;
         }
     }
@@ -79,16 +73,13 @@ public class PopUpController extends VBox implements Styles {
             sourceDrop.getItems().add(source.fullname);
         }
 
-        for (Stats method : Stats.values()) {
-            statDrop.getItems().add(method.method_name);
+        for (Stats statMethod : Stats.values()) {
+            statDrop.getItems().add(statMethod.method_name);
         }
 
-        for (Advancement method : Advancement.values()) {
-            expDrop.getItems().add(method.method_name);
+        for (Advancement advMethod : Advancement.values()) {
+            expDrop.getItems().add(advMethod.method_name);
         }
-        
-
-        
     }
 
 
